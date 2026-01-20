@@ -1,0 +1,159 @@
+@import "root.css";
+
+/* =========================
+   HOME – GLOBAL
+========================= */
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 4rem;
+  min-height: 100vh;
+  gap: 3rem;
+}
+
+/* =========================
+   TEXTE
+========================= */
+
+.home .text {
+  max-width: 600px;
+}
+
+.home h1 {
+  font-size: 2.8rem;
+  color: var(--black-main);
+  margin-bottom: 0.5rem;
+}
+
+.home h3 {
+  font-size: 1.4rem;
+  color: var(--blue-main);
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1rem;
+  color: var(--gray-light);
+  line-height: 1.7;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+.cta-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.8rem 1.4rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-download {
+  background: var(--blue-main);
+  color: white;
+}
+
+.btn-download:hover {
+  background: var(--blue-accent);
+  transform: translateY(-2px);
+}
+
+.btn-contact {
+  border: 2px solid var(--blue-main);
+  color: var(--blue-main);
+}
+
+.btn-contact:hover {
+  background: var(--blue-main);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.home .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--blue-main);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================================================
+   RESPONSIVE — TES BREAKPOINTS
+====================================================== */
+
+/* 📱 Téléphone */
+@media only screen and (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 📲 Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .cta-button {
+    justify-content: center;
+  }
+}
+
+/* 💻 Laptop */
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .home {
+    padding: 5rem 3rem;
+  }
+
+  .home h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* 🖥️ Desktop */
+@media only screen and (min-width: 1025px) {
+  .home {
+    padding: 6rem 5rem;
+  }
+}

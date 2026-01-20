@@ -1,0 +1,175 @@
+@import "root.css";
+
+/* =========================
+   ABOUT – GLOBAL
+========================= */
+
+/* =========================
+   SECTION ABOUT
+========================= */
+
+.about {
+  padding: 5rem 8%;
+  background: var(--white-main);
+  color: var(--black-main);
+}
+
+/* Titre principal */
+.about h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--black-soft);
+}
+
+/* Intro */
+.about > p {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+}
+
+/* =========================
+   INFOS & PARCOURS
+========================= */
+
+.infosParc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Carte générique */
+.infos,
+.parcours {
+  background: var(--white-soft);
+  padding: 2.4rem 2.2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+}
+
+/* Titres des cartes */
+.infos h3,
+.parcours h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--blue-main);
+}
+
+/* =========================
+   INFOS PERSONNELLES
+========================= */
+
+.infos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.infos li {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+
+    background: var(--white-main);
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.infos li i {
+  font-size: 1.1rem;
+  color: var(--blue-main);
+}
+
+.infos li span {
+  font-weight: 600;
+  color: var(--black-main);
+}
+
+/* =========================
+   PARCOURS PROFESSIONNEL
+========================= */
+
+.parcours p {
+  line-height: 1.7;
+  color: var(--black-lighter);
+}
+
+/* =========================
+   OBJECTIFS
+========================= */
+
+.doubleObjec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Objectif perso & pro */
+.doubleObjec > div {
+  background: var(--white-soft);
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+}
+
+.doubleObjec h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--blue-main);
+}
+
+.doubleObjec p {
+  line-height: 1.7;
+  color: var(--black-lighter);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .about {
+    padding: 4rem 6%;
+  }
+
+  .infosParc,
+  .doubleObjec {
+    grid-template-columns: 1fr;
+  }
+
+  .about h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .infosParc,
+  .doubleObjec {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .about {
+    padding: 5rem 6%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  .about {
+    padding: 6rem 10%;
+  }
+}

@@ -1,0 +1,70 @@
+:root {
+    /* Couleurs principales – MODE CLAIR */
+    --white-main: #ffffff;      /* fond principal */
+    --white-soft: #f5f7ff;      /* fond secondaire / cartes */
+
+    --gray-light: #6b7280;      /* texte secondaire */
+    --gray-soft: #9ca3af;       /* labels, placeholders */
+
+    --black-main: #111827;      /* texte principal */
+    --black-soft: #1f2937;      /* titres */
+    --black-lighter: #374151;   /* texte atténué */
+
+    --blue-main: #4d5bff;       /* couleur primaire */
+    --blue-accent: #3a4bff;     /* boutons / liens */
+    --blue-light: #7aa2ff;      /* hover / focus */
+    --blue-bright: #6c8cff;     /* badges / highlights */
+    --blue-dark: #2f3abf;       /* boutons actifs */
+
+    /* Dégradés – MODE CLAIR */
+    --gradient-primary: linear-gradient(135deg, var(--blue-main), var(--blue-light));
+    --gradient-dark: linear-gradient(135deg, var(--white-soft), var(--blue-light));
+    --gradient-hover: linear-gradient(135deg, var(--blue-accent), var(--blue-bright));
+
+    /* Effets et ombres – MODE CLAIR */
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 0 20px rgba(77, 91, 255, 0.25);
+    --shadow-hover: 0 12px 28px rgba(77, 91, 255, 0.18);
+
+    --border-glow: rgba(77, 91, 255, 0.25);
+    --border-light: rgba(77, 91, 255, 0.12);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ABeeZee', serif;
+  
+  font-style: italic;
+  font-weight: 400;
+}
+
+a, p, i, li {
+  font-family: 'ABeeZee', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 25px;
+}
+
+section {
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}

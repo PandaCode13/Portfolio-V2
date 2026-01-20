@@ -1,0 +1,265 @@
+@import "root.css";
+
+/* =========================
+   HEADER – STYLE GLOBAL
+========================= */
+
+header {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  padding: 1rem 3rem;
+  background: var(--white-main);
+  box-shadow: var(--shadow-card);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* =========================
+   LOGO / TITRE
+========================= */
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--blue-main);
+  letter-spacing: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--black-soft);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--blue-main);
+}
+
+/* underline animé */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--blue-main);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   MODE TOGGLE
+========================= */
+
+#mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.356rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-light);
+
+  background: var(--white-soft);
+  color: var(--black-soft);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#mode-toggle:hover {
+  background: var(--gradient-primary);
+  color: var(--white-main);
+  box-shadow: var(--shadow-glow);
+}
+
+/* =========================
+   BOUTONS PROFIL
+========================= */
+
+.profil-button {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.7rem 1.3rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Bouton CV */
+.button.cv {
+  background: var(--white-soft);
+  color: var(--blue-main);
+  border: 1px solid var(--border-light);
+}
+
+.button.cv:hover {
+  background: var(--gradient-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Bouton Contact */
+.button.contact {
+  background: var(--gradient-primary);
+  color: var(--white-main);
+}
+
+.button.contact:hover {
+  background: var(--gradient-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--black-main);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media only screen and (max-width: 768px) {
+
+  header {
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  #mode-toggle {
+    width: 150px;
+    justify-content: center;
+  }
+
+  .profil-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+
+  nav ul a {
+    font-size: 13px;
+  }
+
+  .profil-button {
+    gap: 0.7rem;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+
+  header {
+    padding: 1rem 2.5rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+  header {
+    padding: 1rem 3rem;
+  }
+
+  nav ul {
+    gap: 1.8rem;
+  }
+}

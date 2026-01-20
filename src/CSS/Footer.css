@@ -1,0 +1,187 @@
+@import "root.css";
+
+/* =========================
+   FOOTER – GLOBAL
+========================= */
+
+footer {
+  background: var(--white-soft);
+  color: var(--black-soft);
+  position: relative;
+  padding: 4rem 3rem 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   TITRE / PRÉSENTATION
+========================= */
+
+.title h3 {
+  font-size: 1.4rem;
+  color: var(--blue-main);
+  margin-bottom: 0.5rem;
+}
+
+.title p {
+  font-size: 0.95rem;
+  color: var(--gray-light);
+}
+
+.title .attention {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--blue-accent);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-info h4,
+.navigation h4,
+.socialMedia h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--black-main);
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--gray-light);
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin-bottom: 0.5rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--gray-light);
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: var(--blue-main);
+}
+
+/* =========================
+   RÉSEAUX SOCIAUX
+========================= */
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.socialMedia a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  text-decoration: none;
+  color: var(--gray-light);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.socialMedia a i {
+  font-size: 1.1rem;
+  color: var(--blue-main);
+}
+
+.socialMedia a:hover {
+  transform: translateX(4px);
+}
+
+/* =========================
+   FOOTER BAS
+========================= */
+
+.footer-droits {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-soft);
+}
+
+.footer-droits p {
+  margin: 0.3rem 0;
+}
+
+/* ======================================================
+   RESPONSIVE — TES BREAKPOINTS EXACTS
+====================================================== */
+
+/* 📱 Téléphone */
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .socialMedia a {
+    justify-content: center;
+  }
+}
+
+/* 📲 Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 💻 Laptop */
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🖥️ Desktop */
+@media only screen and (min-width: 1025px) {
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* LE CSS PROPRE POUR CHAQUE RÉSEAUX SOCIAUX */
+.socialMedia a.facebook:hover, .socialMedia a:hover i {
+  color: #3b5998;
+}
+.socialMedia a.twitter:hover, .socialMedia a.twitter:hover i {
+  color: #1da1f2;
+}
+.socialMedia a.linkedin:hover, .socialMedia a.linkedin:hover i {
+  color: #0077b5;
+}
+.socialMedia a.github:hover, .socialMedia a.github:hover i {
+  color: #333333;
+}
+.socialMedia a.instagram:hover, .socialMedia a.instagram:hover i {
+  color: #e4405f;
+}

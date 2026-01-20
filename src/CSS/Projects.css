@@ -1,0 +1,161 @@
+@import "root.css";
+
+/* =========================
+   SECTION PROJECTS
+========================= */
+
+.projects {
+  padding: 5rem 8%;
+  background: var(--white-soft);
+  color: var(--black-main);
+}
+
+/* Titre */
+.projects h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--black-soft);
+}
+
+/* Description */
+.projects > p {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER DES PROJETS
+========================= */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.2rem;
+}
+
+/* =========================
+   CARTE PROJET
+========================= */
+
+.project-card {
+  background: var(--white-main);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* IMAGE DU PROJET */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENU DU PROJET */
+.project-content {
+  padding: 1.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* TITRE */
+.project-content h3 {
+  font-size: 1.3rem;
+  color: var(--blue-main);
+  margin-bottom: 0.5rem;
+}
+
+/* DESCRIPTION */
+.project-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--black-lighter);
+}
+
+/* TECHNOLOGIES */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.project-tech li {
+  background: var(--blue-bright);
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  list-style: none;
+}
+
+/* LIEN DU PROJET */
+.project-link {
+  margin-top: auto;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: var(--blue-main);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: var(--blue-accent);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .projects {
+    padding: 4rem 6%;
+  }
+
+  .projects h2 {
+    font-size: 1.9rem;
+  }
+
+  .project-image img {
+    height: 180px;
+  }
+}
+
+/* Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .projects {
+    padding: 5rem 6%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  .projects {
+    padding: 6rem 10%;
+  }
+}
