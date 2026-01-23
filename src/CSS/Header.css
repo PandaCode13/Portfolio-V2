@@ -1,265 +1,311 @@
 @import "root.css";
 
-/* =========================
-   HEADER – STYLE GLOBAL
-========================= */
-
+/* --- Structure du Header --- */
 header {
-  position: relative;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-
+  left: 0;
+  width: 100%;
+  height: 80px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-
-  padding: 1rem 3rem;
-  background: var(--white-main);
-  box-shadow: var(--shadow-card);
+  align-items: center;
+  padding: 0 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* Effet flou moderne */
   border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+  animation: slideDown 0.8s ease-out forwards;
 }
-
-/* =========================
-   LOGO / TITRE
-========================= */
 
 header h1 {
-  font-size: 1.8rem;
-  font-weight: 800;
   color: var(--blue-main);
+  font-size: 1.5rem;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* --- Navigation Desktop --- */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 nav ul {
   display: flex;
-  gap: 1.8rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 25px;
 }
 
-nav a {
-  position: relative;
+nav ul li {
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+nav ul li a {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--black-soft);
+  color: var(--black-main);
+  font-size: 0.95rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-nav a:hover {
+nav ul li a:hover {
   color: var(--blue-main);
 }
 
-/* underline animé */
-nav a::after {
-  content: "";
+/* Petit soulignement animé au survol */
+nav ul li a::after {
+  content: '';
   position: absolute;
-  left: 0;
-  bottom: -6px;
   width: 0;
   height: 2px;
-  background: var(--blue-main);
+  bottom: -5px;
+  left: 0;
+  background-color: var(--blue-main);
   transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+nav ul li a:hover::after {
   width: 100%;
 }
 
-/* =========================
-   MODE TOGGLE
-========================= */
-
-#mode-toggle {
+/* --- Boutons à droite --- */
+.header-right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 15px;
+}
 
-  padding: 0.356rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-light);
-
+#mode-toggle {
   background: var(--white-soft);
-  color: var(--black-soft);
-  font-size: 0.9rem;
+  border: 1px solid var(--border-light);
+  padding: 8px 15px;
+  border-radius: 20px;
   cursor: pointer;
+  color: var(--black-main);
   transition: all 0.3s ease;
 }
 
 #mode-toggle:hover {
-  background: var(--gradient-primary);
-  color: var(--white-main);
-  box-shadow: var(--shadow-glow);
+  background: var(--blue-main);
+  color: white;
 }
-
-/* =========================
-   BOUTONS PROFIL
-========================= */
 
 .profil-button {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  padding: 0.7rem 1.3rem;
-  border-radius: 12px;
-  font-weight: 500;
+.profil-button a {
   text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
 }
 
-/* Bouton CV */
-.button.cv {
-  background: var(--white-soft);
-  color: var(--blue-main);
-  border: 1px solid var(--border-light);
-}
-
-.button.cv:hover {
-  background: var(--gradient-dark);
-  box-shadow: var(--shadow-hover);
-}
-
-/* Bouton Contact */
-.button.contact {
+.profil-button a:nth-child(1) {
   background: var(--gradient-primary);
-  color: var(--white-main);
+  color: var(--white-soft);
+  position: relative;
+  overflow: hidden;
+  animation: pulseGlow 2s infinite;
+
+  &:hover {
+    background: var(--gradient-hover);
+    color: #000;
+  }
 }
 
-.button.contact:hover {
-  background: var(--gradient-hover);
-  box-shadow: var(--shadow-hover);
+.profil-button a:nth-child(2) {
+  background: var(--blue-accent);
+  color: var(--white-soft);
+
+  &:hover {
+    background: var(--blue-main);
+    color: var(--white-soft);
+    position: relative;
+    overflow: hidden;
+    animation: pulseGlow 2s infinite;
+  }
 }
 
-/* =========================
-   HAMBURGER
-========================= */
-
+/* --- Menu Mobile (Hamburger) --- */
 .hamburger {
-  display: none;
+  display: none; /* Caché sur desktop */
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .hamburger span {
-  width: 24px;
+  width: 30px;
   height: 3px;
-  background: var(--black-main);
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  background-color: var(--blue-main);
+  border-radius: 10px;
 }
 
-/* Animation */
-.hamburger.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.close-menu {
+  display: none; /* Caché par défaut */
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
+/* Délai pour chaque lien (cascade) */
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.3s; }
+nav ul li:nth-child(3) { animation-delay: 0.4s; }
+nav ul li:nth-child(4) { animation-delay: 0.5s; }
+nav ul li:nth-child(5) { animation-delay: 0.6s; }
+nav ul li:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
 }
 
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media only screen and (max-width: 768px) {
-
-  header {
-    flex-wrap: wrap;
-    padding: 1rem 1.5rem;
-    position: relative;
-    margin-bottom: 15px;
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(77, 91, 255, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(77, 91, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(77, 91, 255, 0); }
+}
+
+/* --- Responsive (Mobile & Tablette) --- */
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
 
-  nav {
-    width: 100%;
-    display: none;
+  .header-content {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Caché à droite */
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--white-main);
+    flex-direction: column;
+    padding: 80px 40px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.4s ease-in-out;
   }
 
-  nav.open {
+  .header-content.open {
+    right: 0; /* Apparaît au clic */
+  }
+
+  .close-menu {
     display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--blue-main);
   }
 
   nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
-  }
-
-  #mode-toggle {
-    width: 150px;
-    justify-content: center;
-  }
-
-  .profil-button {
+    gap: 30px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width: 767px) and (max-width: 992px) {
-
-  header {
-    padding: 1rem 2rem;
   }
 
-  nav ul {
-    gap: 1.2rem;
-  }
-
-  nav ul a {
-    font-size: 13px;
+  .header-right {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
   }
 
   .profil-button {
-    gap: 0.7rem;
-    font-size: 14px;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
-@media only screen and (min-width: 993px) and (max-width: 1024px) {
+/* =========================
+   HEADER – MODE SOMBRE
+   ========================= */
 
-  header {
-    padding: 1rem 2.5rem;
-  }
-
-  nav ul {
-    gap: 1.5rem;
-  }
+body.dark-mode header {
+  background-color: rgba(15, 23, 42, 0.85); /* cohérent avec root.css */
+  border-bottom: 1px solid var(--border-light);
+  backdrop-filter: blur(12px);
 }
 
-@media only screen and (min-width: 1025px) {
+/* Logo / titre */
+body.dark-mode header h1 {
+  color: var(--blue-light);
+}
 
-  header {
-    padding: 1rem 3rem;
+/* Liens navigation */
+body.dark-mode nav ul li a {
+  color: var(--black-main);
+}
+
+body.dark-mode nav ul li a:hover {
+  color: var(--blue-light);
+}
+
+/* Soulignement hover */
+body.dark-mode nav ul li a::after {
+  background-color: var(--blue-light);
+}
+
+/* Bouton toggle dark/light */
+body.dark-mode #mode-toggle {
+  background: #020617;
+  color: var(--black-main);
+  border: 1px solid var(--border-light);
+}
+
+body.dark-mode #mode-toggle:hover {
+  background: var(--blue-main);
+  color: #ffffff;
+}
+
+/* Boutons profil */
+body.dark-mode .profil-button a:nth-child(1) {
+  background: var(--gradient-primary);
+  color: #ffffff;
+}
+
+body.dark-mode .profil-button a:nth-child(2) {
+  background: var(--blue-dark);
+  color: #ffffff;
+}
+
+body.dark-mode .profil-button a:nth-child(2):hover {
+  background: var(--blue-main);
+}
+
+/* Hamburger */
+body.dark-mode .hamburger span {
+  background-color: var(--blue-light);
+}
+
+/* Menu mobile */
+@media (max-width: 1024px) {
+
+  body.dark-mode .header-content {
+    background: #020617;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
   }
 
-  nav ul {
-    gap: 1.8rem;
+  body.dark-mode .close-menu {
+    color: var(--blue-light);
   }
+
 }

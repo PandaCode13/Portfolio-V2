@@ -1,34 +1,39 @@
 :root {
-    /* Couleurs principales – MODE CLAIR */
-    --white-main: #ffffff;      /* fond principal */
-    --white-soft: #f5f7ff;      /* fond secondaire / cartes */
+    /* --- MODE CLAIR (Défaut) --- */
+    --white-main: #ffffff;
+    --white-soft: #f5f7ff;
+    --gray-light: #6b7280;
+    --gray-soft: #9ca3af;
+    --black-main: #111827;
+    --black-soft: #1f2937;
+    --black-lighter: #374151;
 
-    --gray-light: #6b7280;      /* texte secondaire */
-    --gray-soft: #9ca3af;       /* labels, placeholders */
+    --blue-main: #4d5bff;
+    --blue-accent: #3a4bff;
+    --blue-light: #7aa2ff;
+    --blue-bright: #6c8cff;
+    --blue-dark: #2f3abf;
 
-    --black-main: #111827;      /* texte principal */
-    --black-soft: #1f2937;      /* titres */
-    --black-lighter: #374151;   /* texte atténué */
-
-    --blue-main: #4d5bff;       /* couleur primaire */
-    --blue-accent: #3a4bff;     /* boutons / liens */
-    --blue-light: #7aa2ff;      /* hover / focus */
-    --blue-bright: #6c8cff;     /* badges / highlights */
-    --blue-dark: #2f3abf;       /* boutons actifs */
-
-    /* Dégradés – MODE CLAIR */
     --gradient-primary: linear-gradient(135deg, var(--blue-main), var(--blue-light));
-    --gradient-dark: linear-gradient(135deg, var(--white-soft), var(--blue-light));
-    --gradient-hover: linear-gradient(135deg, var(--blue-accent), var(--blue-bright));
-
-    /* Effets et ombres – MODE CLAIR */
+    --gradient-hover: linear-gradient(135deg to right, var(--blue-light), var(--blue-main));
     --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-glow: 0 0 20px rgba(77, 91, 255, 0.25);
-    --shadow-hover: 0 12px 28px rgba(77, 91, 255, 0.18);
-
-    --border-glow: rgba(77, 91, 255, 0.25);
+    --shadow-glow: 0 0 20px rgba(77, 91, 255, 0.3);
     --border-light: rgba(77, 91, 255, 0.12);
+    --header-bg: rgba(255, 255, 255, 0.8);
+}
 
+/* --- MODE SOMBRE (Activé via JS) --- */
+body.dark-mode {
+    --white-main: #0f172a;      /* Fond sombre profond */
+    --white-soft: #1e293b;      /* Fond secondaire */
+    --black-main: #f8fafc;      /* Texte presque blanc */
+    --black-soft: #f1f5f9;      /* Titres clairs */
+    --black-lighter: #cbd5e1;
+    
+    --header-bg: rgba(15, 23, 42, 0.8);
+    --border-light: rgba(255, 255, 255, 0.1);
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(77, 91, 255, 0.5);
 }
 
 * {
@@ -39,7 +44,6 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'ABeeZee', serif;
-  
   font-style: italic;
   font-weight: 400;
 }
@@ -66,5 +70,120 @@ section {
   border-radius: 12px;
   box-shadow: var(--shadow-hover);
   margin-top: 10px;
+  background: var(--gray-soft);
   margin-bottom: 50px;
+}
+
+section:nth-child(2), section:nth-child(4), section:nth-child(6) {
+  background: var(--white-soft);
+}
+
+/* =========================
+   ADAPTATIONS DARK MODE UI
+   ========================= */
+
+body.dark-mode {
+  background-color: var(--white-main);
+  color: var(--black-main);
+}
+
+/* Sections */
+body.dark-mode section {
+  background: var(--white-soft);
+  box-shadow: var(--shadow-card);
+}
+
+/* Sections alternées */
+body.dark-mode section:nth-child(2),
+body.dark-mode section:nth-child(4),
+body.dark-mode section:nth-child(6) {
+  background: #020617; /* encore plus sombre pour le contraste */
+}
+
+/* Titres */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--black-soft);
+}
+
+/* Texte */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a,
+body.dark-mode i {
+  color: var(--black-lighter);
+}
+
+/* Liens */
+body.dark-mode a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode a:hover {
+  color: var(--blue-light);
+}
+
+/* Cartes / blocs */
+body.dark-mode .card,
+body.dark-mode .box,
+body.dark-mode .container {
+  background: #020617;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+}
+
+/* Boutons */
+body.dark-mode button {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(77, 91, 255, 0.6);
+}
+
+/* Inputs */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #020617;
+  color: var(--black-main);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--gray-soft);
+}
+
+/* Header (si présent) */
+body.dark-mode header {
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Scrollbar (bonus stylé) */
+body.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--blue-main);
+  border-radius: 10px;
 }

@@ -29,7 +29,7 @@ function Footer() {
                 <div className="socialMedia">
                     <h2>Liens de mes réseaux sociaux</h2>
                     <a className="linkeldn" href="https://www.linkedin.com/in/said-mohamed-abdo-47083a379" target="_blank"><i className="fa-brands fa-linkedin"></i>LinkedIn</a>
-                    <a className="github" href="https://github.com/saidmohamedabdo" target="_blank"><i className="fa-brands fa-github"></i>GitHub</a>
+                    <a className="github" href="https://github.com/PandaCode13" target="_blank"><i className="fa-brands fa-github"></i>GitHub</a>
                     <a className="instagram" href="https://www.instagram.com/pandacoding24/" target="_blank"><i className="fa-brands fa-instagram"></i>Instagram</a>
                     <a className="email" href="mailto:smohamedabdo895@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i>Email</a>
                 </div>

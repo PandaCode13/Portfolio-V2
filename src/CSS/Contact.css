@@ -1,0 +1,236 @@
+@import "root.css";
+
+/* =========================
+   SECTION CONTACT
+========================= */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 5rem 8%;
+  background: var(--white-soft);
+  color: var(--black-main);
+}
+
+/* =========================
+   INFORMATIONS DE CONTACT
+========================= */
+
+.contact .informations {
+  flex: 1 1 400px;
+}
+
+.contact .informations h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black-soft);
+}
+
+.contact .informations p {
+  margin-bottom: 1.5rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+}
+
+/* =========================
+   LISTES – UL / LI
+========================= */
+
+/* Conteneur général */
+.contact ul {
+  list-style: none;         /* Supprime les puces par défaut */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;             /* Espacement vertical entre les lignes */
+}
+
+/* Chaque élément de la liste */
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;             /* Espacement entre icône / label / contenu */
+  background: var(--white-main);
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover subtil pour dynamisme */
+.contact li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(77,91,255,0.12);
+}
+
+/* Icônes dans la liste */
+.contact li i {
+  font-size: 1.1rem;
+  color: var(--blue-main);
+  min-width: 24px;         /* Assure un alignement propre */
+  text-align: center;
+}
+
+/* Texte / labels */
+.contact li strong {
+  font-weight: 600;
+  color: var(--black-main);
+}
+
+/* Lien contenu dans le li */
+.contact li a {
+  color: var(--blue-main);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact li a:hover {
+  color: var(--blue-accent);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .contact ul {
+    gap: 1rem;
+  }
+
+  .contact li {
+    padding: 0.7rem 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact li i {
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .contact li {
+    gap: 0.7rem;
+  }
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.formulaire {
+  flex: 1 1 400px;
+  background: var(--white-main);
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+}
+
+.formulaire h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--blue-main);
+}
+
+/* Form groups */
+.formulaire .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.formulaire label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--black-main);
+}
+
+.formulaire input,
+.formulaire textarea {
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: var(--white-soft);
+  color: var(--black-main);
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  border-color: var(--blue-main);
+  box-shadow: 0 0 8px rgba(77, 91, 255, 0.2);
+  outline: none;
+}
+
+.formulaire textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formulaire button {
+  padding: 0.7rem 1.4rem;
+  background: var(--blue-main);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.formulaire button:hover {
+  background: var(--blue-accent);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 6%;
+  }
+
+  .formulaire {
+    width: 100%;
+  }
+
+  .contact .informations {
+    width: 100%;
+  }
+}
+
+/* Tablette */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .contact {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4.5rem 6%;
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .contact {
+    padding: 5rem 6%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  .contact {
+    padding: 6rem 10%;
+  }
+}
