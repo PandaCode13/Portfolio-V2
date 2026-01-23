@@ -5,8 +5,11 @@
 ========================= */
 
 footer {
-  background: var(--white-soft);
-  color: var(--black-soft);
+  background-color: var(--white-main);
+  color: var(--black-main);
+  border: 2px soild #000;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   position: relative;
   padding: 4rem 3rem 2rem;
   border-top: 1px solid var(--border-light);
@@ -184,4 +187,26 @@ footer {
 }
 .socialMedia a.instagram:hover, .socialMedia a.instagram:hover i {
   color: #e4405f;
+}
+
+/* =========================
+   FOOTER – MODE SOMBRE
+   ========================= */
+
+body.dark-mode footer {
+  background-color: var(--white-soft);
+  color: var(--black-main);
+  border-top: 1px solid var(--border-light);
+}
+
+/* Texte du footer */
+body.dark-mode footer p,
+body.dark-mode footer li,
+body.dark-mode footer a {
+  color: var(--black-lighter);
+}
+
+/* Liens footer */
+body.dark-mode footer a:hover {
+  color: var(--blue-light);
 }

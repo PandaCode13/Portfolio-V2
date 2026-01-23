@@ -15,7 +15,7 @@
     --blue-dark: #2f3abf;
 
     --gradient-primary: linear-gradient(135deg, var(--blue-main), var(--blue-light));
-    --gradient-hover: linear-gradient(135deg to right, var(--blue-light), var(--blue-main));
+    --gradient-hover: linear-gradient(135deg, var(--blue-light), var(--blue-main));
     --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.08);
     --shadow-glow: 0 0 20px rgba(77, 91, 255, 0.3);
     --border-light: rgba(77, 91, 255, 0.12);
@@ -70,12 +70,13 @@ section {
   border-radius: 12px;
   box-shadow: var(--shadow-hover);
   margin-top: 10px;
-  background: var(--gray-soft);
+  background: var(--white-soft);
   margin-bottom: 50px;
 }
 
-section:nth-child(2), section:nth-child(4), section:nth-child(6) {
-  background: var(--white-soft);
+input[type = text], input[type = textarea], input[type = email] {
+  color: var(--gray-light);
+  border: 2px solid #000;
 }
 
 /* =========================
