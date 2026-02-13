@@ -1,5 +1,5 @@
 import logomydigitalschool from "../assets/logo-mydigitalschool.png";
-import logouniversitédeDjibouti from "../assets/logo-université-de-Djibouti.png";
+import logouniversitedeDjibouti from "../assets/logo-université-de-Djibouti.png";
 import logoLPGB from "../assets/logo-LPGB.png";
 
 const formations = [
@@ -23,7 +23,7 @@ const formations = [
         mention: "Assez Bien",
         projets: ["CV en Ligne Express", "RavenBooks", "Wikipédia Planétaire", "Interface pour les Algorithmes de Graphes", "Gestion de commandes et de restaurants"],
         adresse: "Université de Djibouti (Campus Balbala), G4Q8+7Q5, Balbala, Djibouti",
-        logo: logouniversitédeDjibouti
+        logo: logouniversitedeDjibouti
     },
     {
         id: 2,
