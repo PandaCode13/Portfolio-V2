@@ -1,7 +1,7 @@
 import portfolioV2 from "../assets/portfolio-V2.png";
-import cvOnlineExpress from "../assets/Logo-cv-online-express.png";
-import wikipediaPlanetaire from "../assets/Logo-Wikipedia-Planetaire.png";
-import pasTresNetflix from "../assets/Logo-PasTresNetflix.png";
+import cvOnlineExpress from "../assets/logo-cv-online-express.png";
+import wikipediaPlanetaire from "../assets/logo-Wikipedia-Planetaire.png";
+import pasTresNetflix from "../assets/logo-PasTresNetflix.png";
 import ravenBooks from "../assets/logo-ravenbooks.png";
 
 const projects = [
