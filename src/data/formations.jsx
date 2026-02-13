@@ -17,7 +17,7 @@ const formations = [
         id: 1,
         title: "Licence Informatique",
         date: "2022 - 2025",
-        filière: "Informatique",
+        filiere: "Informatique",
         institution: "Université de Djibouti",
         description: "Obtention de la licence en informatique en 2025, avec une connaissance approfondie des bases du développement web, des bases de données et des concepts de programmation.",
         mention: "Assez Bien",
@@ -29,11 +29,11 @@ const formations = [
         id: 2,
         title: "Baccaulauréat Scientifique",
         date: "2018 - 2021",
-        filière: "Série Scientifique",
+        filiere: "Série Scientifique",
         institution: "Lycée Privée Guelleh Batal",
         description: "Obtention du baccalauréat scientifique avec une solide formation en mathématiques",
         mention: "Assez Bien",
-        adresse: "Lycée privée Guelleh Batal, H4CW+R6F، جيبوتي‎،، Djibouti",
+        adresse: "Lycée Privé Guelleh Batal, H4CW+R6F، جيبوتي‎،، Djibouti",
         logo: logolpgb
     }
 ];
