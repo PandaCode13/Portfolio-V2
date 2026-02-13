@@ -16,6 +16,7 @@ header {
   border-bottom: 1px solid var(--border-light);
   z-index: 1000;
   animation: slideDown 0.8s ease-out forwards;
+  margin-bottom: 25px;
 }
 
 header h1 {
