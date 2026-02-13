@@ -1,6 +1,6 @@
-import logomydigitalschool from "../assets/logo-mydigitalschool.png";
-import logouniversitedeDjibouti from "../assets/logo-universite-de-djibouti.png";
-import logolpgb from "../assets/logo-lpgb.png";
+import logomydigitalschool from "../assets/logomydigitalschool.png";
+import logouniversitedeDjibouti from "../assets/logouniversitededjibouti.png";
+import logolpgb from "../assets/logolpgb.png";
 
 const formations = [
     {
