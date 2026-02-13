@@ -1,6 +1,6 @@
 import logomydigitalschool from "../assets/logo-mydigitalschool.png";
 import logouniversitedeDjibouti from "../assets/logo-universite-de-djibouti.png";
-import logoLPGB from "../assets/logo-lpgb.png";
+import logolpgb from "../assets/logo-lpgb.png";
 
 const formations = [
     {
@@ -34,7 +34,7 @@ const formations = [
         description: "Obtention du baccalauréat scientifique avec une solide formation en mathématiques",
         mention: "Assez Bien",
         adresse: "Lycée privée Guelleh Batal, H4CW+R6F، جيبوتي‎،، Djibouti",
-        logo: logoLPGB
+        logo: logolpgb
     }
 ];
 
