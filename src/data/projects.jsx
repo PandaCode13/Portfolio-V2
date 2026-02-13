@@ -1,3 +1,9 @@
+import portfolioV2 from "../assets/portfolio-V2.png";
+import cvOnlineExpress from "../assets/Logo-cv-online-express.png";
+import wikipediaPlanetaire from "../assets/Logo-Wikipedia-Planetaire.png";
+import pasTresNetflix from "../assets/Logo-PasTrèsNetflix.png";
+import ravenBooks from "../assets/logo-ravenbooks.png";
+
 const projects = [
   {
     id: 1,
@@ -5,7 +11,7 @@ const projects = [
     description:"Portfolio personnel conçu pour présenter mes projets, compétences et expériences en développement web full stack.",
     technologies: ["React", "CSS", "JavaScript"],
     link: "https://github.com/PandaCode13/Portfolio-V2.git",
-    picture: "../../src/assets/portfolio-V2.png"
+    picture: portfolioV2
   },
   {
     id: 2,
@@ -13,7 +19,7 @@ const projects = [
     description:"Un projet scolaire qui consiste à créer une plateforme web permettant de créer et personnaliser rapidement un CV en ligne à partir de modèles prédéfinis, avec une documentation métier, des conseils et un accompagnement pour la rédaction de CV, lettres de motivation et rapports de stage.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     link: "https://github.com/PandaCode13/CV-EN-LIGNE-EXPRESS.git",
-    picture: "../../src/assets/Logo-cv-online-express.png"
+    picture: cvOnlineExpress
   },
   {
     id: 3,
@@ -21,7 +27,7 @@ const projects = [
     description:"Site web éducatif regroupant des informations détaillées sur les planètes du système solaire.",
     technologies: ["HTML", "CSS", "JavaScript", "JSON"],
     link: "https://github.com/PandaCode13/Wikipedia-Planetaire.git",
-    picture: "../../src/assets/Logo-Wikipedia-Planetaire.png"
+    picture: wikipediaPlanetaire
   },
   {
     id: 4,
@@ -29,7 +35,7 @@ const projects = [
     description:"Un projet scolaire qui consiste à créer une application web de streaming permettant de rechercher des films et séries et d’accéder à leurs informations via l’API TMDB.",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "API TMDB"],
     link: "https://github.com/PandaCode13/PROJET-PASTRESNETFLIX.git",
-    picture: "../../src/assets/Logo-PasTrèsNetflix.png"
+    picture: pasTresNetflix
   },
   {
     id: 5,
@@ -37,7 +43,7 @@ const projects = [
     description:"Un projet scolaire qui consiste à créer un site web qui permet aux utilisateurs de trouver les livres dans les différents bibliothèques de Djbouti comme l'Institut Français ou encore l'Université de Djibouti.",
     technologies: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
     link: "https://github.com/DrPower01/Ravenbooks.git",
-    picture: "../../src/assets/logo-ravenbooks.png"
+    picture: ravenBooks
   }
 ];
 

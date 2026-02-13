@@ -1,3 +1,7 @@
+import logomydigitalschool from "../assets/logo-mydigitalschool.png";
+import logouniversitédeDjibouti from "../assets/logo-université-de-Djibouti.png";
+import logoLPGB from "../assets/logo-LPGB.png";
+
 const formations = [
     {
         id: 0,
@@ -7,7 +11,7 @@ const formations = [
         description: "Actuellement en cours d'obtention de mon master MBA Développement Full Stack",
         projets: ["PasTrèsNetflix", "GlycAmed", "Application de Musique comme Sonnerie de cours", 'Piscine Typescript', "Starpi"],
         adresse: "40 Rue du Chemin Vert, 75011 Paris",
-        logo: "../../src/assets/logo-mydigitalschool.png"
+        logo: logomydigitalschool
     },
     {
         id: 1,
@@ -19,7 +23,7 @@ const formations = [
         mention: "Assez Bien",
         projets: ["CV en Ligne Express", "RavenBooks", "Wikipédia Planétaire", "Interface pour les Algorithmes de Graphes", "Gestion de commandes et de restaurants"],
         adresse: "Université de Djibouti (Campus Balbala), G4Q8+7Q5, Balbala, Djibouti",
-        logo: "../../src/assets/logo-université-de-Djibouti.png"
+        logo: logouniversitédeDjibouti
     },
     {
         id: 2,
@@ -30,7 +34,7 @@ const formations = [
         description: "Obtention du baccalauréat scientifique avec une solide formation en mathématiques",
         mention: "Assez Bien",
         adresse: "Lycée privée Guelleh Batal, H4CW+R6F، جيبوتي‎،، Djibouti",
-        logo: "../../src/assets/logo-LPGB.png"
+        logo: logoLPGB
     }
 ];
 
